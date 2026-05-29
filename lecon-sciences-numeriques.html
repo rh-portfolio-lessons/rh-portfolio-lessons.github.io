@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leçon préparée en sciences numériques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Projet éducatif</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <ul class="menu" id="navMenu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="lecon-sciences-numeriques.html" class="active" aria-current="page">Leçon</a></li>
+        <li><a href="evaluation-formative.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="hero-content">
+      <p class="eyebrow">Page leçon</p>
+      <h1>Leçon préparée en sciences numériques</h1>
+      <p class="subtitle">Découvrir Scratch et les premières notions de programmation visuelle en EB3.</p>
+      <div class="page-actions">
+        <a href="index.html" class="btn btn-secondary">Accueil</a>
+        <a href="cv.html" class="btn btn-secondary">CV</a>
+        <a href="evaluation-formative.html" class="btn">Passer à l’évaluation</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" class="container">
+    <section class="section">
+      <h2>Présentation de la leçon</h2>
+      <div class="project-box">
+        <h3>Description du projet final</h3>
+        <p>
+          Ce site éducatif interactif cible des élèves de EB3. Il propose une leçon de sciences numériques sur Scratch,
+          des ressources multimédias, trois activités interactives, des fonctions d’accessibilité et une évaluation formative.
+        </p>
+      </div>
+      <div class="lesson-grid">
+        <div>
+          <h3>Groupe cible</h3>
+          <p>Élèves de EB3 débutants en programmation visuelle.</p>
+        </div>
+        <div>
+          <h3>Objectif général</h3>
+          <p>Comprendre comment utiliser des blocs Scratch pour donner des instructions simples à un lutin.</p>
+        </div>
+      </div>
+      <h3>Résultats d’apprentissage</h3>
+      <ul class="custom-list">
+        <li>Identifier le lutin, la scène et les blocs dans l’interface Scratch.</li>
+        <li>Expliquer le rôle d’un bloc de programmation simple.</li>
+        <li>Construire une petite suite d’instructions dans le bon ordre.</li>
+        <li>Choisir un bloc adapté à une mission donnée.</li>
+        <li>Répondre à une évaluation formative et recevoir un score.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contenu de la leçon</h2>
+      <p>
+        Scratch est un environnement de programmation visuelle. Au lieu d’écrire de longues lignes de code,
+        l’élève assemble des blocs colorés pour créer une animation, un jeu ou une histoire interactive.
+      </p>
+      <div class="image-gallery">
+        <figure>
+          <img src="scratch-cat.png" alt="Le lutin chat dans Scratch">
+          <figcaption>Le lutin : le personnage qui exécute les actions.</figcaption>
+        </figure>
+        <figure>
+          <img src="scratch-interface.png" alt="Interface du logiciel Scratch avec scène et blocs">
+          <figcaption>L’interface : scène, blocs et zone de programmation.</figcaption>
+        </figure>
+        <figure>
+          <img src="scratch-blocks.png" alt="Exemples de blocs Scratch colorés">
+          <figcaption>Les blocs : instructions données au lutin.</figcaption>
+        </figure>
+      </div>
+      <div class="audio-video-box">
+        <h3>Ressources multimédias</h3>
+        <p>Écoute l’explication audio ou consulte les vidéos pour revoir la notion.</p>
+        <button id="playLessonAudio" class="btn" type="button">Écouter la leçon</button>
+        <button id="stopLessonAudio" class="btn btn-secondary" type="button">Arrêter l’audio</button>
+        <div class="video-links" aria-label="Liens vidéos Scratch">
+          <a href="https://scratch.mit.edu/ideas" target="_blank" rel="noopener">Idées Scratch</a>
+          <a href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted" target="_blank" rel="noopener">Tutoriel Scratch</a>
+          <a href="https://scratch.mit.edu/explore/projects/all" target="_blank" rel="noopener">Explorer des projets</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Activités interactives</h2>
+      <article class="activity">
+        <h3>Activité 1 : faire bouger le lutin</h3>
+        <p>Clique sur le bouton pour donner une instruction au lutin.</p>
+        <button id="moveSpriteBtn" class="btn" type="button">Avancer le lutin</button>
+        <div class="stage" aria-live="polite">
+          <span id="sprite" class="sprite" role="img" aria-label="Lutin Scratch">🐱</span>
+          <p id="spriteMessage">Le lutin attend ton instruction.</p>
+        </div>
+      </article>
+
+      <article class="activity">
+        <h3>Activité 2 : remettre les blocs dans l’ordre</h3>
+        <p>Choisis l’ordre correct pour créer un petit programme.</p>
+        <div class="order-game">
+          <label for="step1">Étape 1</label>
+          <select id="step1">
+            <option value="">Choisir</option>
+            <option value="move">Avancer de 10 pas</option>
+            <option value="say">Dire Bonjour</option>
+            <option value="flag">Quand le drapeau vert est cliqué</option>
+          </select>
+          <label for="step2">Étape 2</label>
+          <select id="step2">
+            <option value="">Choisir</option>
+            <option value="move">Avancer de 10 pas</option>
+            <option value="say">Dire Bonjour</option>
+            <option value="flag">Quand le drapeau vert est cliqué</option>
+          </select>
+          <label for="step3">Étape 3</label>
+          <select id="step3">
+            <option value="">Choisir</option>
+            <option value="move">Avancer de 10 pas</option>
+            <option value="say">Dire Bonjour</option>
+            <option value="flag">Quand le drapeau vert est cliqué</option>
+          </select>
+          <button id="checkOrderBtn" class="btn" type="button">Vérifier</button>
+          <p id="orderResult" class="message" aria-live="polite"></p>
+        </div>
+      </article>
+
+      <article class="activity">
+        <h3>Activité 3 : choisir le bon bloc</h3>
+        <p class="mission"><strong>Mission :</strong> le lutin doit dire « Bonjour ! ». Quel bloc faut-il choisir ?</p>
+        <div class="choice-buttons">
+          <button class="choice-btn" data-correct="false" type="button">Avancer de 10 pas</button>
+          <button class="choice-btn" data-correct="true" type="button">Dire Bonjour !</button>
+          <button class="choice-btn" data-correct="false" type="button">Changer l’arrière-plan</button>
+        </div>
+        <p id="blockChoiceResult" class="message" aria-live="polite"></p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Accessibilité et justification pédagogique</h2>
+      <div class="accessibility-box">
+        <h3>Fonctionnalités d’accessibilité</h3>
+        <ul class="custom-list">
+          <li>Navigation claire et identique sur les pages principales.</li>
+          <li>Indication visuelle de la page active dans le menu.</li>
+          <li>Effet hover sur les liens et les boutons.</li>
+          <li>Textes alternatifs pour les images.</li>
+          <li>Contrastes élevés et mise en page responsive.</li>
+        </ul>
+      </div>
+      <div class="pedagogy-box">
+        <h3>Justification pédagogique</h3>
+        <p>
+          La leçon suit une progression simple : observation, explication, manipulation, entraînement et évaluation.
+          Les activités interactives favorisent l’apprentissage actif et aident l’élève à vérifier immédiatement sa compréhension.
+        </p>
+      </div>
+      <a href="evaluation-formative.html" class="btn">Commencer l’évaluation formative</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Page leçon - Sciences numériques / Scratch EB3</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

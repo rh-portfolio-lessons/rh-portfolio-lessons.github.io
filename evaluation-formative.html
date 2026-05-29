@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz / évaluation formative</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Projet éducatif</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <ul class="menu" id="navMenu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="lecon-sciences-numeriques.html">Leçon</a></li>
+        <li><a href="evaluation-formative.html" class="active" aria-current="page">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="hero-content">
+      <p class="eyebrow">Évaluation formative</p>
+      <h1>Quiz Scratch EB3</h1>
+      <p class="subtitle">Réponds aux questions sur Scratch et découvre ton score automatiquement.</p>
+      <div class="page-actions">
+        <a href="index.html" class="btn btn-secondary">Accueil</a>
+        <a href="cv.html" class="btn btn-secondary">CV</a>
+        <a href="lecon-sciences-numeriques.html" class="btn">Relire la leçon</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" class="container">
+    <section class="section quiz-section">
+      <h2>Évaluation formative : Scratch EB3</h2>
+      <p>Choisis une seule réponse pour chaque question. À la fin, clique sur le bouton pour obtenir ton score.</p>
+      <div id="quizContainer"></div>
+      <button id="submitQuiz" class="btn" type="button">Voir mon score</button>
+      <button id="resetQuiz" class="btn btn-secondary" type="button">Recommencer</button>
+      <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+    </section>
+
+    <section class="section">
+      <h2>Après le quiz</h2>
+      <p>Si le score est faible, l’élève peut retourner à la page de leçon, revoir les notions, puis recommencer l’évaluation.</p>
+      <a href="lecon-sciences-numeriques.html" class="btn">Relire la leçon</a>
+      <a href="index.html" class="btn btn-secondary">Retour à l’accueil</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Évaluation formative - Scratch EB3</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

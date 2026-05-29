@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Projet éducatif interactif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Projet éducatif</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <ul class="menu" id="navMenu">
+        <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="lecon-sciences-numeriques.html">Leçon</a></li>
+        <li><a href="evaluation-formative.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero home-hero">
+    <div class="hero-content">
+      <img src="Rita.jpg.jpg" alt="Photo de Rita EL HELOU ZGHEIB" class="profile-img">
+      <p class="eyebrow">Site éducatif interactif</p>
+      <h1>Bienvenue dans mon projet final</h1>
+      <p class="subtitle">Un site relié en plusieurs pages : accueil, CV, leçon préparée et évaluation formative.</p>
+      <div class="page-actions">
+        <a href="cv.html" class="btn">Voir mon CV</a>
+        <a href="lecon-sciences-numeriques.html" class="btn btn-secondary">Découvrir la leçon</a>
+        <a href="evaluation-formative.html" class="btn btn-secondary">Faire le quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" class="container">
+    <section class="section intro-section">
+      <h2>Présentation du site</h2>
+      <p>
+        Ce site présente mon profil professionnel et une leçon préparée en sciences numériques pour des élèves de EB3.
+        La leçon est accompagnée de ressources multimédias, d’activités interactives, d’éléments d’accessibilité
+        et d’une évaluation formative avec score automatique.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Navigation entre les pages</h2>
+      <div class="home-cards">
+        <article class="home-card">
+          <h3>Page CV</h3>
+          <p>Cette page contient le CV complet avec profil, formation, expériences, compétences, stages et loisirs.</p>
+          <a href="cv.html" class="btn">Ouvrir le CV</a>
+        </article>
+
+        <article class="home-card">
+          <h3>Page leçon</h3>
+          <p>Cette page contient la leçon de sciences numériques sur Scratch avec trois activités interactives.</p>
+          <a href="lecon-sciences-numeriques.html" class="btn">Ouvrir la leçon</a>
+        </article>
+
+        <article class="home-card">
+          <h3>Page quiz</h3>
+          <p>Cette page contient une évaluation formative interactive pour vérifier la compréhension des élèves.</p>
+          <a href="evaluation-formative.html" class="btn">Ouvrir le quiz</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Critères du projet final</h2>
+      <ul class="custom-list checklist">
+        <li><strong>Résultats d’apprentissage clairs :</strong> présents dans la page de leçon.</li>
+        <li><strong>Ressources multimédias :</strong> images, audio et liens vidéos.</li>
+        <li><strong>Activités interactives :</strong> trois activités dans la page de leçon.</li>
+        <li><strong>Accessibilité :</strong> menu clair, textes alternatifs, contraste, boutons lisibles et design responsive.</li>
+        <li><strong>Justification pédagogique :</strong> présente dans la page de leçon.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet éducatif interactif - Rita EL HELOU ZGHEIB</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
